@@ -6,15 +6,20 @@
   <meta name="theme-color" content="#f7f0e5">
   <title>Naseej — family moments, skills and stories</title>
   <link rel="stylesheet" href="app.css">
+  <script src="version-controller.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div id="demo-tools" class="demo-tools" hidden aria-label="Prototype demonstration controls">
-    <span>Demonstration only</span>
-    <label for="role-switch">View as</label>
-    <select id="role-switch"><option value="Grandparent">Grandparent</option><option value="Parent">Parent</option><option value="Grandchild">Grandchild</option></select>
-    <button type="button" id="reset-demo" class="demo-reset">Reset local demo</button>
-  </div>
+  <details id="demo-tools" class="demo-tools" hidden aria-label="Prototype controls">
+    <summary class="demo-tools-toggle">Preview controls</summary>
+    <div class="demo-controls-content">
+      <div class="demo-role-row"><label for="role-switch">View as</label>
+        <select id="role-switch"><option value="Grandparent">Grandparent</option><option value="Parent">Parent</option><option value="Grandchild">Grandchild</option></select>
+        <button type="button" id="reset-demo" class="demo-reset">Reset local demo</button>
+      </div>
+      <div class="demo-version-row"><label for="version-select">Version</label><select id="version-select" aria-label="Version"><option value="v1">Prototype 1</option><option value="v2" selected>Prototype 2</option></select></div>
+    </div>
+  </details>
   <button type="button" id="show-role-choice" class="stage-role-button" hidden>Change role</button>
   <main class="app-frame" id="app-frame">
     <header class="topbar">
@@ -41,6 +46,7 @@
       <button type="button" data-tab="memories"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="14" height="16" rx="2"/><path d="M8 4V2.5h12v16h-2M7 15l3-3 2.5 2 2-2 3.5 4H7z"/></svg></span><span>Memories</span></button>
       <button type="button" data-tab="recipes"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v7M4.5 3v4c0 2 1 3 2.5 3s2.5-1 2.5-3V3M7 10v11M17 3c-2 2-3 5-3 9h6V3M17 12v9"/></svg></span><span>Recipes</span></button>
     </nav>
+    <iframe id="version-frame" title="Naseej prototype version" hidden></iframe>
   </main>
   <input id="media-input" type="file" accept="image/*,video/*,audio/*" multiple hidden>
   <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>

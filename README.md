@@ -2,24 +2,25 @@
 
 **Live app:** <https://abiali1210.github.io/naseej-prototype-1/>
 
-A self-contained, offline-capable family app prototype for grandparents and grandchildren. It uses vanilla HTML, CSS and JavaScript, local starter assets and no build step, framework, package manager, server requirement or internet connection.
+A self-contained, offline-capable family app prototype for grandparents and grandchildren. It uses vanilla HTML, CSS and JavaScript with local starter assets, no build step, framework, package manager or internet connection. A local HTTP server is recommended for the versioned preview.
 
 ## Open the prototype
 
-Unzip the folder and open `index.html` in a current Chrome, Edge, Firefox or Safari browser. Keep `assets/` beside the HTML file.
-
-On desktop, the app is a centered **390×884** phone canvas, uniformly scaled to fit the browser window. On narrow screens it fills the viewport. Use the **عربي / English** toggle in the top-right of the app header to change language; Arabic switches the interface to right-to-left. The choice is remembered in that browser. The demonstration role selector and reset controls sit outside the app; desktop shows them automatically. Add `?demo=1` to the address to show the controls on a narrow screen. The role switch simulates a family using one browser; it does not sync between devices.
-
-Microphone recording works when the browser permits `getUserMedia` for the opened file. If the browser blocks file-origin microphone access, a local server is an optional fallback:
+For the local version selector and iframe preview, run a server from this folder:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Open <http://localhost:4173/>. No server is needed for the rest of the app.
+Open <http://localhost:4173/>. The newest registered prototype (currently V2) opens by default; select V1 from the external **Version** controls to compare it. The preview is a centered **390×884** phone canvas on desktop and fills the viewport on narrow screens. Use the **عربي / English** toggle in the phone header; Arabic switches the interface to right-to-left. The preference is remembered in that browser. Role, reset and version controls are outside the phone; desktop shows them automatically. Add `?demo=1` to show the collapsible controls on a narrow screen. The role switch simulates a family using one browser; it does not sync between devices.
+
+Directly opening `index.html` remains available; localhost is recommended for reliable version switching and V2 local assets.
+
+V2's tap-to-record, preview, Play/Pause, seek and share actions are simulated in memory; it does not request microphone or photo-file access. V1 retains its original browser microphone and media-storage behavior.
 
 ## Current interactions
 
+- **V2:** choose Today, Skills, Memories or Recipes from the four-card hub. Today puts Record and Photo before the family-moment feed; Skills, Memories and Recipes also offer a simple add flow. Recording, playback controls and sharing update only the current in-memory preview.
 - **Home, Today and Memories:** tap or keyboard-activate a moment/story card to open its detail. The Today card's audio controls play separately from card navigation.
 - **Media details:** image attachments open the full-screen viewer with Previous/Next and a small magnifier control. Swipe navigation is supported in that viewer. Videos play inline with browser controls. Voice notes and audio attachments use the shared audio player.
 - **Add a moment:** select multiple photos, videos and audio attachments; remove items before sharing; optionally record a voice note. Saved moments appear in Today and can be browsed in detail.
@@ -31,13 +32,13 @@ Sample family stories, recipes, lesson text and generated/sample narration are s
 
 ## Local data and browser APIs
 
-Role, user-created item metadata, recipe checklist state, cooked state and lesson state are saved in `localStorage`. User-selected binary media is stored in the browser's IndexedDB database (`naseej-local-media`) and shown from local object URLs. This browser data is **not** copied when the project folder is shared or unzipped elsewhere. There is no cloud service or cross-device sync.
+V1 role, user-created item metadata, recipe checklist state, cooked state and lesson state are saved in `localStorage`. V1 user-selected binary media is stored in the browser's IndexedDB database (`naseej-local-media`) and shown from local object URLs. V2 state is seeded and in-memory only; resetting or reloading V2 restores the seed. There is no cloud service or cross-device sync.
 
 The app uses browser-native file inputs, `localStorage`, IndexedDB, `URL.createObjectURL`, HTML video controls, `MediaRecorder`/`getUserMedia`, `speechSynthesis` and (where available) Web Audio for narration. No added JavaScript libraries or network services are required. Nunito Sans, the DejaVu Sans Arabic font and image assets are bundled locally; Stitch exports are references only and are not loaded at runtime.
 
 ## Known limits and next user test
 
-- Microphone access and user-media storage depend on browser permissions and the local browser profile. Those technical paths are not part of the current usability focus; localhost is the optional microphone fallback.
+- V1 microphone access and user-media storage depend on browser permissions and the local browser profile. V2 simulates voice/photo actions without requesting those APIs.
 - The role switch is a same-device simulation. A high-contrast theme and cloud family sharing are not implemented.
 - Fixed interface labels support English and Arabic, with RTL layout. User-entered family titles, descriptions and step text remain in the language the family entered them.
 - Sample stories, sample recipes, sample lessons and sample narration must remain identified as synthetic.

@@ -9,7 +9,7 @@
   const arabic = {
     'Naseej — family moments, skills and stories':'نسيج — لحظات العائلة ومهاراتها وحكاياتها',
     'Switch to Arabic':'التبديل إلى العربية','Switch to English':'التبديل إلى الإنجليزية',
-    'Demonstration only':'للعرض فقط','View as':'العرض بصفة','Grandparent':'جد أو جدة','Parent':'أحد الوالدين','Grandchild':'حفيد أو حفيدة','Reset local demo':'إعادة ضبط العرض','Change role':'تغيير الدور',
+    'Demonstration only':'للعرض فقط','Preview controls':'أدوات المعاينة','View as':'العرض بصفة','Grandparent':'جد أو جدة','Parent':'أحد الوالدين','Grandchild':'حفيد أو حفيدة','Reset local demo':'إعادة ضبط العرض','Change role':'تغيير الدور','Version':'الإصدار','Prototype 1':'النموذج ١','Prototype 2':'النموذج ٢',
     'Back':'رجوع','Close':'إغلاق','Home':'الرئيسية','Today':'اليوم','Skills':'المهارات','Memories':'الذكريات','Recipes':'الوصفات',
     'Grandma':'الجدة','Grandson':'الحفيد','Relationship':'صلة القرابة','Our family':'عائلتنا',
     'Family moments woven':'لحظات عائلية مترابطة','Baking':'الخبز','Garden':'الحديقة','Old house':'البيت القديم','Linked with clay and pine threads':'خيوط تجمعنا','A new moment joined the weave.':'انضمت لحظة جديدة إلى نسيج العائلة.','Recent moments':'لحظات أخيرة','Baking together':'نخبز معًا','Looking at the garden':'نتأمل الحديقة','See today\'s moments':'شاهد لحظات اليوم',
@@ -863,10 +863,10 @@
   });
   document.addEventListener('input',(event)=>{const slider=event.target.closest('[data-audio-seek]');if(slider)seekAudio(slider.dataset.audioSeek,slider.value);});
   backButton.addEventListener('click',back);
-  $('#role-switch')?.addEventListener('change',(event)=>setRole(event.target.value));
+  $('#role-switch')?.addEventListener('change',(event)=>{if(window.naseejPreviewVersion==='v1')setRole(event.target.value);});
   $('#language-toggle')?.addEventListener('click',()=>{language=language==='ar'?'en':'ar';try{localStorage.setItem(languageKey,language);}catch{}applyLanguage();});
-  $('#show-role-choice')?.addEventListener('click',showRoleChoice);
-  $('#reset-demo')?.addEventListener('click',()=>{localStorage.removeItem(storageKey);state=defaultState();routeStack=[];route='home';chosenPhoto=null;chosenMedia=[];recording=null;audioUrls.clear();localMediaUrls.clear();try{window.indexedDB?.deleteDatabase('naseej-local-media');}catch{}showRoleChoice();announce('The local demonstration has been reset.');});
+  $('#show-role-choice')?.addEventListener('click',()=>{if(window.naseejPreviewVersion==='v1')showRoleChoice();});
+  $('#reset-demo')?.addEventListener('click',()=>{if(window.naseejPreviewVersion!=='v1')return;localStorage.removeItem(storageKey);state=defaultState();routeStack=[];route='home';chosenPhoto=null;chosenMedia=[];recording=null;audioUrls.clear();localMediaUrls.clear();try{window.indexedDB?.deleteDatabase('naseej-local-media');}catch{}showRoleChoice();announce('The local demonstration has been reset.');});
   document.addEventListener('touchstart',(event)=>{if(route==='media-viewer'&&event.touches.length===2)pinchStart=Math.hypot(event.touches[0].clientX-event.touches[1].clientX,event.touches[0].clientY-event.touches[1].clientY);},{passive:true});
   document.addEventListener('touchmove',(event)=>{if(route==='media-viewer'&&pinchStart&&event.touches.length===2){const distance=Math.hypot(event.touches[0].clientX-event.touches[1].clientX,event.touches[0].clientY-event.touches[1].clientY);if(Math.abs(distance-pinchStart)>20){zoomed=distance>pinchStart;const image=$('.viewer-image');if(image)image.classList.toggle('is-zoomed',zoomed);pinchStart=distance;}}},{passive:true});
   document.addEventListener('touchend',(event)=>{if(route!=='media-viewer')return;if(pinchStart&&event.touches.length<2)pinchStart=0;const touch=event.changedTouches[0];if(!touch)return;const start=window.__naseejTouchStart;if(start&&Math.abs(touch.clientX-start.x)>65&&Math.abs(touch.clientY-start.y)<80){const action=touch.clientX<start.x?'next-media':'previous-media';clickAction(action,{dataset:{}});}}, {passive:true});
