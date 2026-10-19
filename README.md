@@ -12,15 +12,16 @@ For the local version selector and iframe preview, run a server from this folder
 python3 -m http.server 4173
 ```
 
-Open <http://localhost:4173/>. The newest registered prototype (currently V2) opens by default; select V1 from the external **Version** controls to compare it. The preview is a centered **390×884** phone canvas on desktop and fills the viewport on narrow screens. Use the **عربي / English** toggle in the phone header; Arabic switches the interface to right-to-left. The preference is remembered in that browser. Role, reset and version controls are outside the phone; desktop shows them automatically. Add `?demo=1` to show the collapsible controls on a narrow screen. The role switch simulates a family using one browser; it does not sync between devices.
+Open <http://localhost:4173/>. The newest registered prototype (V3) opens by default; select earlier versions from the external **Version** controls to compare them. The public Pages site now serves V3 at its root. The preview is a centered **390×884** phone canvas on desktop and fills the viewport on narrow screens. Use the **عربي / English** toggle in the phone header; Arabic switches the interface to right-to-left. The preference is remembered in that browser. Role, reset and version controls are outside the phone; desktop shows them automatically. Add `?demo=1` to show the collapsible controls on a narrow screen. The role switch simulates a family using one browser; it does not sync between devices.
 
-Directly opening `index.html` remains available; localhost is recommended for reliable version switching and V2 local assets.
+Directly opening `index.html` remains available; localhost is recommended for reliable version switching and local assets.
 
 V2's tap-to-record, preview, Play/Pause, seek and share actions are simulated in memory; it does not request microphone or photo-file access. V1 retains its original browser microphone and media-storage behavior.
 
 ## Current interactions
 
 - **V2:** choose Today, Skills, Memories or Recipes from the four-card hub. Today puts Record and Photo before the family-moment feed; Skills, Memories and Recipes also offer a simple add flow. Recording, playback controls and sharing update only the current in-memory preview.
+- **V3:** retains the V2 screens and adds one compact home card; tap it once to change “Send Grandma a hello” into “Ali is thinking of you.” The hello is an in-memory concept simulation, not a notification.
 - **Home, Today and Memories:** tap or keyboard-activate a moment/story card to open its detail. The Today card's audio controls play separately from card navigation.
 - **Media details:** image attachments open the full-screen viewer with Previous/Next and a small magnifier control. Swipe navigation is supported in that viewer. Videos play inline with browser controls. Voice notes and audio attachments use the shared audio player.
 - **Add a moment:** select multiple photos, videos and audio attachments; remove items before sharing; optionally record a voice note. Saved moments appear in Today and can be browsed in detail.

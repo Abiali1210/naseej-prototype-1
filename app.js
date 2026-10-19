@@ -9,7 +9,7 @@
   const arabic = {
     'Naseej — family moments, skills and stories':'نسيج — لحظات العائلة ومهاراتها وحكاياتها',
     'Switch to Arabic':'التبديل إلى العربية','Switch to English':'التبديل إلى الإنجليزية',
-    'Demonstration only':'للعرض فقط','Preview controls':'أدوات المعاينة','View as':'العرض بصفة','Grandparent':'جد أو جدة','Parent':'أحد الوالدين','Grandchild':'حفيد أو حفيدة','Reset local demo':'إعادة ضبط العرض','Change role':'تغيير الدور','Version':'الإصدار','Prototype 1':'النموذج ١','Prototype 2':'النموذج ٢',
+    'Demonstration only':'للعرض فقط','Preview controls':'أدوات المعاينة','View as':'العرض بصفة','Grandparent':'جد أو جدة','Parent':'أحد الوالدين','Grandchild':'حفيد أو حفيدة','Reset local demo':'إعادة ضبط العرض','Change role':'تغيير الدور','Version':'الإصدار','Prototype 1':'النموذج ١','Prototype 2':'النموذج ٢','Prototype 3':'النموذج ٣',
     'Back':'رجوع','Close':'إغلاق','Home':'الرئيسية','Today':'اليوم','Skills':'المهارات','Memories':'الذكريات','Recipes':'الوصفات',
     'Grandma':'الجدة','Grandson':'الحفيد','Relationship':'صلة القرابة','Our family':'عائلتنا',
     'Family moments woven':'لحظات عائلية مترابطة','Baking':'الخبز','Garden':'الحديقة','Old house':'البيت القديم','Linked with clay and pine threads':'خيوط تجمعنا','A new moment joined the weave.':'انضمت لحظة جديدة إلى نسيج العائلة.','Recent moments':'لحظات أخيرة','Baking together':'نخبز معًا','Looking at the garden':'نتأمل الحديقة','See today\'s moments':'شاهد لحظات اليوم',

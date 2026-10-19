@@ -27,6 +27,8 @@ jobs:
           mkdir -p _site
           cp index.html app.css app.js version-controller.js README.md _site/
           cp -R assets v2 _site/
+          mkdir -p _site/v3
+          cp v3/index.html v3/v3.css v3/v3.js _site/v3/
           touch _site/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

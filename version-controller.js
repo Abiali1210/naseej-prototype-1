@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   window.naseejPreviewVersion = 'v1';
-  const registry = { v1: { native: true }, v2: { src: './v2/index.html?embedded=1' } };
+  const registry = { v1: { native: true }, v2: { src: './v2/index.html?embedded=1' }, v3: { src: './v3/index.html?embedded=1' } };
   const latestVersion = Object.keys(registry).filter((version) => version !== 'v1').at(-1) || 'v1';
   const frame = document.getElementById('version-frame');
   const select = document.getElementById('version-select');
