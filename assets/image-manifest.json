@@ -1,0 +1,216 @@
+{
+  "assets": {
+    "85e6fa028733589f": {
+      "file": "85e6fa028733589f.jpg",
+      "mime": "image/jpeg",
+      "bytes": 58742,
+      "screens": [
+        "02-today",
+        "02-today-corrected"
+      ]
+    },
+    "d4a3eaa1fa3bddbd": {
+      "file": "d4a3eaa1fa3bddbd.jpg",
+      "mime": "image/jpeg",
+      "bytes": 90486,
+      "screens": [
+        "02-today",
+        "02-today-corrected"
+      ]
+    },
+    "78611ccc755e448c": {
+      "file": "78611ccc755e448c.jpg",
+      "mime": "image/jpeg",
+      "bytes": 45949,
+      "screens": [
+        "01-home"
+      ]
+    },
+    "6e084ea71e58a9ff": {
+      "file": "6e084ea71e58a9ff.jpg",
+      "mime": "image/jpeg",
+      "bytes": 51029,
+      "screens": [
+        "02-today",
+        "02-today-corrected"
+      ]
+    },
+    "0c2882e08cd2e2a3": {
+      "file": "0c2882e08cd2e2a3.jpg",
+      "mime": "image/jpeg",
+      "bytes": 95928,
+      "screens": [
+        "01-home"
+      ]
+    },
+    "49b04c74c09b7d32": {
+      "file": "49b04c74c09b7d32.jpg",
+      "mime": "image/jpeg",
+      "bytes": 83415,
+      "screens": [
+        "01-home"
+      ]
+    },
+    "83bc61a8b4bb3f52": {
+      "file": "83bc61a8b4bb3f52.jpg",
+      "mime": "image/jpeg",
+      "bytes": 94039,
+      "screens": [
+        "03-add-a-moment"
+      ]
+    },
+    "cc9bae5291fc9b31": {
+      "file": "cc9bae5291fc9b31.jpg",
+      "mime": "image/jpeg",
+      "bytes": 37529,
+      "screens": [
+        "01-home"
+      ]
+    },
+    "532cb4fa69c17dd2": {
+      "file": "532cb4fa69c17dd2.jpg",
+      "mime": "image/jpeg",
+      "bytes": 53277,
+      "screens": [
+        "05-the-prompt"
+      ]
+    },
+    "ae3da4391ccab54b": {
+      "file": "ae3da4391ccab54b.jpg",
+      "mime": "image/jpeg",
+      "bytes": 50891,
+      "screens": [
+        "04-my-day"
+      ]
+    },
+    "1e0b2e2dd809c5b3": {
+      "file": "1e0b2e2dd809c5b3.jpg",
+      "mime": "image/jpeg",
+      "bytes": 56144,
+      "screens": [
+        "06-answer-with-voice"
+      ]
+    },
+    "880fe6cbac29cc70": {
+      "file": "880fe6cbac29cc70.jpg",
+      "mime": "image/jpeg",
+      "bytes": 91666,
+      "screens": [
+        "07-answer-from-photos"
+      ]
+    },
+    "ad3ed6e52787e0b7": {
+      "file": "ad3ed6e52787e0b7.jpg",
+      "mime": "image/jpeg",
+      "bytes": 47949,
+      "screens": [
+        "07-answer-from-photos"
+      ]
+    },
+    "7640fdb4e5d149b5": {
+      "file": "7640fdb4e5d149b5.jpg",
+      "mime": "image/jpeg",
+      "bytes": 34232,
+      "screens": [
+        "07-answer-from-photos"
+      ]
+    },
+    "97d74f35cd2f7058": {
+      "file": "97d74f35cd2f7058.jpg",
+      "mime": "image/jpeg",
+      "bytes": 97904,
+      "screens": [
+        "04-my-day"
+      ]
+    },
+    "5a8ddbd03dbd9cba": {
+      "file": "5a8ddbd03dbd9cba.jpg",
+      "mime": "image/jpeg",
+      "bytes": 39422,
+      "screens": [
+        "08-point-at-photo"
+      ]
+    },
+    "4074283394337ae2": {
+      "file": "4074283394337ae2.jpg",
+      "mime": "image/jpeg",
+      "bytes": 43346,
+      "screens": [
+        "09-confirm-send"
+      ]
+    },
+    "cb73464016dd506c": {
+      "file": "cb73464016dd506c.jpg",
+      "mime": "image/jpeg",
+      "bytes": 40366,
+      "screens": [
+        "10-grandson-receives"
+      ]
+    },
+    "47297a843b0cdbd6": {
+      "file": "47297a843b0cdbd6.jpg",
+      "mime": "image/jpeg",
+      "bytes": 62357,
+      "screens": [
+        "11-skills"
+      ]
+    },
+    "57c6311166167735": {
+      "file": "57c6311166167735.jpg",
+      "mime": "image/jpeg",
+      "bytes": 40297,
+      "screens": [
+        "12-skill-detail"
+      ]
+    },
+    "d423fe1f8b55012d": {
+      "file": "d423fe1f8b55012d.jpg",
+      "mime": "image/jpeg",
+      "bytes": 54210,
+      "screens": [
+        "11-skills"
+      ]
+    },
+    "4f781e21da991cec": {
+      "file": "4f781e21da991cec.jpg",
+      "mime": "image/jpeg",
+      "bytes": 90654,
+      "screens": [
+        "11-skills"
+      ]
+    },
+    "d320ba5ad6252277": {
+      "file": "d320ba5ad6252277.jpg",
+      "mime": "image/jpeg",
+      "bytes": 44364,
+      "screens": [
+        "07-answer-from-photos"
+      ]
+    },
+    "c558d310524380d0": {
+      "file": "c558d310524380d0.jpg",
+      "mime": "image/jpeg",
+      "bytes": 92069,
+      "screens": [
+        "13-memories"
+      ]
+    },
+    "a4f0275ce40e9399": {
+      "file": "a4f0275ce40e9399.jpg",
+      "mime": "image/jpeg",
+      "bytes": 46607,
+      "screens": [
+        "13-memories"
+      ]
+    },
+    "918953d68de0aad3": {
+      "file": "918953d68de0aad3.jpg",
+      "mime": "image/jpeg",
+      "bytes": 99616,
+      "screens": [
+        "13-memories"
+      ]
+    }
+  },
+  "failures": []
+}

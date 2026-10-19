@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f0e5">
+  <title>Naseej — family moments, skills and stories</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="demo-tools" class="demo-tools" hidden aria-label="Prototype demonstration controls">
+    <span>Demonstration only</span>
+    <label for="role-switch">View as</label>
+    <select id="role-switch"><option value="Grandparent">Grandparent</option><option value="Parent">Parent</option><option value="Grandchild">Grandchild</option></select>
+    <button type="button" id="reset-demo" class="demo-reset">Reset local demo</button>
+  </div>
+  <button type="button" id="show-role-choice" class="stage-role-button" hidden>Change role</button>
+  <main class="app-frame" id="app-frame">
+    <header class="topbar">
+      <button id="back-button" class="back-button" type="button" hidden><span aria-hidden="true">←</span> Back</button>
+      <a class="brand" href="#home" aria-label="Naseej Home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Naseej</span></a>
+      <div class="topbar-tools"><span id="role-label" class="role-label"></span><button id="language-toggle" class="language-toggle" type="button" aria-label="Switch to Arabic">عربي</button></div>
+    </header>
+    <section id="role-screen" class="role-screen" hidden aria-labelledby="role-title">
+      <div class="role-copy"><h1 id="role-title">Who is using this?</h1><p>Choose how you are joining the family today.</p></div>
+      <div class="role-options">
+        <button class="role-option role-grandparent" data-role="Grandparent" type="button"><span>Grandparent</span><span class="option-arrow" aria-hidden="true">→</span></button>
+        <button class="role-option role-parent" data-role="Parent" type="button"><span>Parent</span><span class="option-arrow" aria-hidden="true">→</span></button>
+        <button class="role-option role-grandchild" data-role="Grandchild" type="button"><span>Grandchild</span><span class="option-arrow" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <div id="screen-root" class="screen-root" hidden>
+      <div id="view-content" class="view-content" tabindex="-1"></div>
+      <div id="action-bar" class="action-bar" hidden></div>
+    </div>
+    <nav id="tab-bar" class="tab-bar" aria-label="Main navigation" hidden>
+      <button type="button" data-tab="home"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3.5 10 8.5-7 8.5 7v10H14v-6h-4v6H3.5z"/></svg></span><span>Home</span></button>
+      <button type="button" data-tab="today"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M7.5 3v4M16.5 3v4M4 9.5h16M8 13h3v3H8z"/></svg></span><span>Today</span></button>
+      <button type="button" data-tab="skills"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m2.5 8.5 9.5-5 9.5 5-9.5 5zM6.5 11v5.5c3.5 2.5 7.5 2.5 11 0V11M21.5 9v6"/></svg></span><span>Skills</span></button>
+      <button type="button" data-tab="memories"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="14" height="16" rx="2"/><path d="M8 4V2.5h12v16h-2M7 15l3-3 2.5 2 2-2 3.5 4H7z"/></svg></span><span>Memories</span></button>
+      <button type="button" data-tab="recipes"><span class="tab-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v7M4.5 3v4c0 2 1 3 2.5 3s2.5-1 2.5-3V3M7 10v11M17 3c-2 2-3 5-3 9h6V3M17 12v9"/></svg></span><span>Recipes</span></button>
+    </nav>
+  </main>
+  <input id="media-input" type="file" accept="image/*,video/*,audio/*" multiple hidden>
+  <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
