@@ -27,6 +27,7 @@
       send('naseej:deactivate');
       frame.hidden = true;
       frame.removeAttribute('src');
+      frame.removeAttribute('allow');
       phone.forEach((node) => { node.inert = false; node.removeAttribute('aria-hidden'); });
       live?.removeAttribute('aria-hidden');
       if (media) media.disabled = false;
@@ -37,6 +38,8 @@
     phone.forEach((node) => { node.inert = true; node.setAttribute('aria-hidden', 'true'); });
     live?.setAttribute('aria-hidden', 'true');
     if (media) media.disabled = true;
+    if (version === 'v3') frame.setAttribute('allow', 'microphone');
+    else frame.removeAttribute('allow');
     frame.hidden = false;
     pendingRole = role?.value || 'Grandparent';
     frame.onload = () => { if (active === version) { pendingRole = role?.value || pendingRole || 'Grandparent'; send('naseej:role', pendingRole); } };
@@ -45,10 +48,10 @@
   select.addEventListener('change', () => selectVersion(select.value));
   role?.addEventListener('change', () => {
     if (active === 'v1' && validRole(role.value)) return;
-    if (active === 'v2' && validRole(role.value)) send('naseej:role', role.value);
+    if (['v2','v3'].includes(active) && validRole(role.value)) send('naseej:role', role.value);
   });
-  choice?.addEventListener('click', () => { if (active === 'v2') send('naseej:role-choice'); });
-  reset?.addEventListener('click', () => { if (active === 'v2') send('naseej:reset'); });
+  choice?.addEventListener('click', () => { if (['v2','v3'].includes(active)) send('naseej:role-choice'); });
+  reset?.addEventListener('click', () => { if (['v2','v3'].includes(active)) send('naseej:reset'); });
   window.addEventListener('message', (event) => {
     if (event.source !== frame.contentWindow || !event.data || event.data.type !== 'naseej:role-selected' || !validRole(event.data.role)) return;
     if (role) role.value = event.data.role;

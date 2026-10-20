@@ -1,0 +1,14 @@
+.v3-message-backdrop{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px;background:rgba(24,39,32,.48);backdrop-filter:blur(5px);font-family:Nunito,system-ui,sans-serif;color:#284a3c}
+.v3-message-dialog{position:relative;width:min(100%,360px);padding:28px 22px 24px;border:1px solid #e4d8c6;border-radius:26px;background:#fffbf5;box-shadow:0 20px 60px rgba(20,32,26,.28);text-align:center}
+.v3-message-dialog h2{margin:4px 36px 24px;font-size:23px;line-height:1.25;font-weight:900}
+.v3-message-close{position:absolute;inset-block-start:12px;inset-inline-end:12px;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:14px;background:#f3eadb;color:#284a3c;font:inherit;font-size:30px;line-height:1;cursor:pointer}
+.v3-message-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.v3-message-choice{display:grid;place-items:center;align-content:center;gap:8px;min-width:0;min-height:126px;padding:12px;border:1px solid #e4d8c6;border-radius:20px;background:#f7f0e5;color:#284a3c;font:inherit;font-size:16px;font-weight:900;cursor:pointer;transition:transform .12s ease,background .12s ease}
+.v3-message-choice svg{width:58px;height:58px}
+.v3-message-choice:hover{background:#f0e3d2;transform:translateY(-2px)}
+.v3-message-dialog button:focus-visible{outline:4px solid #d3a24b;outline-offset:3px}
+.v3-message-success{display:grid;justify-items:center;padding:18px 4px 10px}
+.v3-message-success svg{width:104px;height:104px}
+.v3-message-success h2{margin:18px 0 4px;color:#3d8357;font-size:28px}
+.v3-message-sent-label{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;color:#985f42;font-size:20px;font-weight:900}.v3-message-sent-label svg{width:28px;height:28px;flex:0 0 28px}
+@media(max-height:500px){.v3-message-dialog{padding:18px}.v3-message-dialog h2{margin-bottom:14px}.v3-message-choice{min-height:98px}.v3-message-choice svg{width:46px;height:46px}}

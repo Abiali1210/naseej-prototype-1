@@ -21,7 +21,7 @@ V2's tap-to-record, preview, Play/Pause, seek and share actions are simulated in
 ## Current interactions
 
 - **V2:** choose Today, Skills, Memories or Recipes from the four-card hub. Today puts Record and Photo before the family-moment feed; Skills, Memories and Recipes also offer a simple add flow. Recording, playback controls and sharing update only the current in-memory preview.
-- **V3:** retains the V2 screens and adds one compact home card; tap it once to change “Send Grandma a hello” into “Ali is thinking of you.” The hello is an in-memory concept simulation, not a notification.
+- **V3:** retains the V2 screens and adds a compact home card with a four-choice message popup. Photo selection uses the device file chooser; voice uses the browser microphone and MediaRecorder after the user taps Record. Photo/audio previews use temporary browser object URLs in memory only—nothing uploads to a server or persists after the preview is closed/reset. Microphone access requires user permission and localhost or HTTPS.
 - **Home, Today and Memories:** tap or keyboard-activate a moment/story card to open its detail. The Today card's audio controls play separately from card navigation.
 - **Media details:** image attachments open the full-screen viewer with Previous/Next and a small magnifier control. Swipe navigation is supported in that viewer. Videos play inline with browser controls. Voice notes and audio attachments use the shared audio player.
 - **Add a moment:** select multiple photos, videos and audio attachments; remove items before sharing; optionally record a voice note. Saved moments appear in Today and can be browsed in detail.
